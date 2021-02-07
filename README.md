@@ -5,7 +5,7 @@
 ## 安装Scoop
 
 ### 注意
-用户名不含中文字符  
+- 用户名不含中文字符  
 - Windows 7 SP1+ / Windows Server 2008+
 - PowerShell 3+
 - .NET Framework 4.5+
