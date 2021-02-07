@@ -5,7 +5,7 @@
 ## 安装Scoop
 
 ### 注意
-- 用户名不含中文字符  
+- 用户名不含中文字符
 - Windows 7 SP1+ / Windows Server 2008+
 - PowerShell 3+
 - .NET Framework 4.5+
@@ -43,6 +43,7 @@ PowerShell运行命令
 >scoop config aria2-max-connection-per-server 16  
 >scoop config aria2-split 16  
 >scoop config aria2-min-split-size 1M
+运行 scoop checkup 检测当前潜在问题，并根据提示进行修正
 
 ### 添加仓库
 scoop bucket add extras  
@@ -101,8 +102,35 @@ Microsoft Store 搜索 Windows Teminal
     // 背景图片 伸缩模式为按比例放大 背景图片透明度  
     "backgroundImage": "ms-appdata:///roaming/goose.png",  
     "backgroundImageStretchMode": "uniformToFill",  
-    "backgroundImageOpacity": 0.6  
+    "backgroundImageOpacity": 0.6,  
+    "colorScheme" : "JesuseMory"  
 }
+"schemes": [  
+        {  
+        "name" : "JesuseMory",  
+        "cursorColor": "#FFFFFF",  
+        "selectionBackground": "#FFFFFF",  
+        "background" : "#0C0C0C",  
+        "foreground" : "#CCCCCC",  
+        "black" : "#0C0C0C",  
+        "blue" : "#0037DA",  
+        "cyan" : "#3A96DD",  
+        "green" : "#13A10E",  
+        "purple" : "#881798",  
+        "red" : "#dd2222",  
+        "white" : "#CCCCCC",  
+        "yellow" : "#C19C00",  
+        "brightBlack" : "#767676",  
+        "brightBlue" : "#3B78FF",  
+        "brightCyan" : "#61D6D6",  
+        "brightGreen" : "#16C60C",  
+        "brightPurple" : "#B4009E",  
+        "brightRed" : "#E74856",  
+        "brightWhite" : "#F2F2F2",  
+        "brightYellow" : "#F9F1A5"  
+        }  
+    ],  
+
 
 编辑$PROFILE，此文件中的命令会在每次打开power shell 7 的时候运行
 >if (!(Test-Path -Path \$PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
