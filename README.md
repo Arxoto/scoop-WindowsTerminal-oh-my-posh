@@ -1,21 +1,20 @@
-# scoop-WindowsTerminal-oh_my_posh
-#Scoop的安装 和 WindowsTerminal美化
+# Scoop的安装 和 WindowsTerminal美化
 
 
 
-##安装Scoop
+## 安装Scoop
 
-###注意
+### 注意
 用户名不含中文字符
 Windows 7 SP1+ / Windows Server 2008+
 PowerShell 3+
 .NET Framework 4.5+
 
-###准备
+### 准备
 win10自带PowerShell 5.X
 推荐PowerShell-7-win-x64.msi  https://github.com/powershell/powershell
 
-###安装Scoop
+### 安装Scoop
 默认的Scoop应用会安装在 C:\Users<user>\scoop
 全局安装的程序（–global）位于C:\ProgramData\scoop
 可以通过环境变量更改设置（可能需要管理员）
@@ -37,7 +36,7 @@ PowerShell运行命令
 如报错可尝试运行
 >Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
-###配置scoop
+### 配置scoop
 运行 scoop help 查看是否安装成功
 运行 scoop install sudo git curl，会自动安装7z
 运行 scoop install aria2 ，并配置
@@ -45,7 +44,7 @@ PowerShell运行命令
 >scoop config aria2-split 16  
 >scoop config aria2-min-split-size 1M
 
-###添加仓库
+### 添加仓库
 scoop bucket add extras
 突然发现里面有许多好用的软件比如geekuninstaller、potplayer等等。。
 但是不推荐用scoop安装steam - -
@@ -56,21 +55,21 @@ scoop bucket add extras
 
 
 
-##安装和美化 Windows Terminal
+## 安装和美化 Windows Terminal
 
-###链接
+### 链接
 Github地址 https://github.com/microsoft/terminal
 Microsoft Store 搜索 Windows Teminal
 
-###安装字体
+### 安装字体
 字体自选下载 https://www.nerdfonts.com/
 我使用的是 JetBrainsMono NF
 
-###安装oh-my-posh
+### 安装oh-my-posh
 使用scoop安装主题
 >scoop install https://github.com/JanDeDobbeleer/oh-my-posh3/releases/latest/download/oh-my-posh.json
 
-###设置
+### 设置
 打开设置，修改默认模式，如
 >"defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}"
 
@@ -185,6 +184,7 @@ jandedobbeleer.omp.json可更换为其他主题
   ],  
   "final_space": true  
 }  
+
 
 
 
