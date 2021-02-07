@@ -5,19 +5,19 @@
 ## 安装Scoop
 
 ### 注意
-用户名不含中文字符
-Windows 7 SP1+ / Windows Server 2008+
-PowerShell 3+
+用户名不含中文字符  
+Windows 7 SP1+ / Windows Server 2008+  
+PowerShell 3+  
 .NET Framework 4.5+
 
 ### 准备
-win10自带PowerShell 5.X
+win10自带PowerShell 5.X  
 推荐PowerShell-7-win-x64.msi  https://github.com/powershell/powershell
 
 ### 安装Scoop
-默认的Scoop应用会安装在 C:\Users<user>\scoop
-全局安装的程序（–global）位于C:\ProgramData\scoop
-可以通过环境变量更改设置（可能需要管理员）
+默认的Scoop应用会安装在 C:\Users<user>\scoop  
+全局安装的程序（–global）位于C:\ProgramData\scoop  
+可以通过环境变量更改设置（可能需要管理员）  
 将Scoop安装到自定义目录
 >\$env:SCOOP='D:\develop\Scoop'  
 >[Environment]::SetEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
@@ -37,16 +37,16 @@ PowerShell运行命令
 >Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
 ### 配置scoop
-运行 scoop help 查看是否安装成功
-运行 scoop install sudo git curl，会自动安装7z
+运行 scoop help 查看是否安装成功  
+运行 scoop install sudo git curl，会自动安装7z  
 运行 scoop install aria2 ，并配置
 >scoop config aria2-max-connection-per-server 16  
 >scoop config aria2-split 16  
 >scoop config aria2-min-split-size 1M
 
 ### 添加仓库
-scoop bucket add extras
-突然发现里面有许多好用的软件比如geekuninstaller、potplayer等等。。
+scoop bucket add extras  
+突然发现里面有许多好用的软件比如geekuninstaller、potplayer等等。。  
 但是不推荐用scoop安装steam - -
 
 
@@ -58,11 +58,11 @@ scoop bucket add extras
 ## 安装和美化 Windows Terminal
 
 ### 链接
-Github地址 https://github.com/microsoft/terminal
+Github地址 https://github.com/microsoft/terminal  
 Microsoft Store 搜索 Windows Teminal
 
 ### 安装字体
-字体自选下载 https://www.nerdfonts.com/
+字体自选下载 https://www.nerdfonts.com/  
 我使用的是 JetBrainsMono NF
 
 ### 安装oh-my-posh
@@ -73,12 +73,12 @@ Microsoft Store 搜索 Windows Teminal
 打开设置，修改默认模式，如
 >"defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}"
 
-参考设置
+参考设置  
 （这里的管理员模式需要安装gsudo）
 >PowerShell -Command "Set-ExecutionPolicy RemoteSigned -scope Process; iwr -useb https://raw.githubusercontent.com/gerardog/gsudo/master/installgsudo.ps1 | iex"
 
-这里的背景和图标都放在 C:\Users\user\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState 文件夹下
-图片链接 https://wallpaperhub.app/wallpapers/6277
+这里的背景和图标都放在 C:\Users\user\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState 文件夹下  
+图片链接 https://wallpaperhub.app/wallpapers/6277  
 图标链接 https://www.iconfont.cn/search/index?searchType=icon&q=powershell
 >{  
     // 默认模式的值就是guid  
@@ -116,8 +116,8 @@ Microsoft Store 搜索 Windows Teminal
 写入（手动）
 >Invoke-Expression (oh-my-posh --init --shell pwsh --config "$(scoop prefix oh-my-posh)/themes/jandedobbeleer.omp.json")
 
-主题路径 Scoop\apps\oh-my-posh\current\themes
-jandedobbeleer.omp.json可更换为其他主题
+主题路径 Scoop\apps\oh-my-posh\current\themes  
+jandedobbeleer.omp.json可更换为其他主题  
 自写的一个主题
 >{  
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh3/main/themes/schema.json",  
@@ -184,7 +184,6 @@ jandedobbeleer.omp.json可更换为其他主题
   ],  
   "final_space": true  
 }  
-
 
 
 
