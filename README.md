@@ -7,7 +7,7 @@
 ### 注意
 - 用户名不含中文字符
 - Windows 7 SP1+ / Windows Server 2008+
-- PowerShell 3+
+- PowerShell 5+
 - .NET Framework 4.5+
 
 ### 准备
@@ -104,7 +104,7 @@ Microsoft Store 搜索 Windows Teminal
     "backgroundImageStretchMode": "uniformToFill",  
     "backgroundImageOpacity": 0.6,  
     "colorScheme" : "JesuseMory"  
-}
+}  
 "schemes": [  
         {  
         "name" : "JesuseMory",  
