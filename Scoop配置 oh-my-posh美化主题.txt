@@ -1,0 +1,37 @@
+[ scoop Manual ]
+
+code $PROFILE
+
+Invoke-Expression (oh-my-posh --init --shell pwsh --config "$(scoop prefix oh-my-posh)/themes/jandedobbeleer.omp.json")
+
+Invoke-Expression (oh-my-posh --init --shell pwsh --config "D:/develop/Scoop_oh-my-posh_JesuseMory.omp.json")
+
+
+
+
+[ Install auto ]
+Install posh-git and oh-my-posh:
+Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser
+
+Enable the prompt:
+# Start the default settings
+Set-Prompt
+# Alternatively set the desired theme:
+Set-Theme Agnoster
+
+To enable the engine edit your PowerShell profile:
+if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
+notepad $PROFILE
+
+Append the following lines to your PowerShell profile:
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Paradox
+
+
+Configuration:
+$ThemeSettings
+
+Helper functions:
+Set-Theme paradox
