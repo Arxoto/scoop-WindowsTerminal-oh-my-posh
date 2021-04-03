@@ -81,6 +81,7 @@ Microsoft Store 搜索 Windows Teminal
 参考设置  
 （这里的管理员模式需要安装gsudo）
 >PowerShell -Command "Set-ExecutionPolicy RemoteSigned -scope Process; iwr -useb https://raw.githubusercontent.com/gerardog/gsudo/master/installgsudo.ps1 | iex"  
+
 或者  
 >scoop install gsudo  
 
@@ -90,7 +91,7 @@ Microsoft Store 搜索 Windows Teminal
 
 ### 设置 oh-my-posh 主题
 编辑$PROFILE，此文件中的命令会在每次打开power shell 7 的时候运行
->if (!(Test-Path -Path \$PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
+>if (!(Test-Path -Path \$PROFILE )) { New-Item -Type File -Path $PROFILE -Force }  
 >notepad $PROFILE
 
 写入（手动）
