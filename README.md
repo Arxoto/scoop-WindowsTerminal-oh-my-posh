@@ -71,8 +71,8 @@ Microsoft Store 搜索 Windows Teminal
 
 ### 安装oh-my-posh
 使用scoop安装主题
->scoop install https://github.com/JanDeDobbeleer/oh-my-posh3/releases/latest/download/oh-my-posh.json
->scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+>scoop install https://github.com/JanDeDobbeleer/oh-my-posh3/releases/latest/download/oh-my-posh.json  
+>scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json  
 
 ### 设置 WindowsTerminal
 打开设置，修改默认模式，如
@@ -80,7 +80,9 @@ Microsoft Store 搜索 Windows Teminal
 
 参考设置  
 （这里的管理员模式需要安装gsudo）
->PowerShell -Command "Set-ExecutionPolicy RemoteSigned -scope Process; iwr -useb https://raw.githubusercontent.com/gerardog/gsudo/master/installgsudo.ps1 | iex"
+>PowerShell -Command "Set-ExecutionPolicy RemoteSigned -scope Process; iwr -useb https://raw.githubusercontent.com/gerardog/gsudo/master/installgsudo.ps1 | iex"  
+或者  
+>scoop install gsudo  
 
 这里的背景和图标都放在 C:\Users\user\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState 文件夹下  
 图片链接 https://wallpaperhub.app/wallpapers/6277  
