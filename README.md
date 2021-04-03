@@ -4,10 +4,10 @@
 
 ## 安装Scoop
 
-### 注意
+### 注意和推荐
 - 用户名不含中文字符
-- Windows 7 SP1+ / Windows Server 2008+
-- PowerShell 5+
+- Windows 10
+- PowerShell 7
 - .NET Framework 4.5+
 
 ### 准备
@@ -33,7 +33,7 @@ PowerShell运行命令
 或
 >iwr -useb get.scoop.sh | iex
 
-如报错可尝试运行
+如报错可尝试先运行
 >Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
 ### 配置scoop
@@ -42,13 +42,15 @@ PowerShell运行命令
 运行 scoop install aria2 ，并配置
 >scoop config aria2-max-connection-per-server 16  
 >scoop config aria2-split 16  
->scoop config aria2-min-split-size 1M
+>scoop config aria2-min-split-size 1M  
+
 运行 scoop checkup 检测当前潜在问题，并根据提示进行修正
 
 ### 添加仓库
 scoop bucket add extras  
+推荐仓库有 extras nerd-fonts java versions nirsoft ...  
 突然发现里面有许多好用的软件比如geekuninstaller、potplayer等等。。  
-但是不推荐用scoop安装steam - -
+但是不推荐用scoop安装steam（软件自动更新问题）
 
 
 
@@ -64,13 +66,15 @@ Microsoft Store 搜索 Windows Teminal
 
 ### 安装字体
 字体自选下载 https://www.nerdfonts.com/  
-我使用的是 JetBrainsMono NF
+我使用的是 JetBrainsMono NF  
+也可以scoop中的直接搜索，在nerd-fonts里
 
 ### 安装oh-my-posh
 使用scoop安装主题
 >scoop install https://github.com/JanDeDobbeleer/oh-my-posh3/releases/latest/download/oh-my-posh.json
+>scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
 
-### 设置
+### 设置 WindowsTerminal
 打开设置，修改默认模式，如
 >"defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}"
 
@@ -81,64 +85,10 @@ Microsoft Store 搜索 Windows Teminal
 这里的背景和图标都放在 C:\Users\user\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState 文件夹下  
 图片链接 https://wallpaperhub.app/wallpapers/6277  
 图标链接 https://www.iconfont.cn/search/index?searchType=icon&q=powershell
->{  
-    // 默认模式的值就是guid  
-    "guid": "{41dd7a51-f0e1-4420-a2ec-1a7130b7e950}",  
-    "name": "PowerShell Elevated",  
-    "hidden": false,  
-    // 管理员模式打开power shell 7  
-    "commandline": "sudo.exe pwsh",  
-    // 启动路径  
-    "startingDirectory": "D:/",  
-    // 图标  
-    "icon" : "ms-appdata:///roaming/powershell.png",  
-    // 字体和大小  
-    "fontFace": "JetBrainsMono NF",  
-    "fontSize": 11,  
-    // 背景颜色和亚克力效果  
-    "background": "#013456",  
-    "useAcrylic": true,  
-    "acrylicOpacity": 0.5,  
-    // 背景图片 伸缩模式为按比例放大 背景图片透明度  
-    "backgroundImage": "ms-appdata:///roaming/goose.png",  
-    "backgroundImageStretchMode": "uniformToFill",  
-    "backgroundImageOpacity": 0.6,  
-    "colorScheme" : "JesuseMory"  
-}  
-"schemes": [  
-        {  
-        "name" : "JesuseMory",  
-        "cursorColor": "#FFFFFF",  
-        "selectionBackground": "#FFFFFF",  
-        "background" : "#0C0C0C",  
-        "foreground" : "#CCCCCC",  
-        "black" : "#0C0C0C",  
-        "blue" : "#0037DA",  
-        "cyan" : "#3A96DD",  
-        "green" : "#13A10E",  
-        "purple" : "#881798",  
-        "red" : "#dd2222",  
-        "white" : "#CCCCCC",  
-        "yellow" : "#C19C00",  
-        "brightBlack" : "#767676",  
-        "brightBlue" : "#3B78FF",  
-        "brightCyan" : "#61D6D6",  
-        "brightGreen" : "#16C60C",  
-        "brightPurple" : "#B4009E",  
-        "brightRed" : "#E74856",  
-        "brightWhite" : "#F2F2F2",  
-        "brightYellow" : "#F9F1A5"  
-        }  
-    ],  
 
-
+### 设置 oh-my-posh 主题
 编辑$PROFILE，此文件中的命令会在每次打开power shell 7 的时候运行
 >if (!(Test-Path -Path \$PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
-
-以上命令可能需要，使用vsCode编辑
->code $PROFILE
-
-没有vsCode也可以用
 >notepad $PROFILE
 
 写入（手动）
@@ -146,74 +96,4 @@ Microsoft Store 搜索 Windows Teminal
 
 主题路径 Scoop\apps\oh-my-posh\current\themes  
 jandedobbeleer.omp.json可更换为其他主题  
-自写的一个主题
->{  
-  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh3/main/themes/schema.json",  
-  "blocks": [  
-    {  
-      "type": "prompt",  
-      "alignment": "right",  
-      "vertical_offset": -1,  
-      "segments": [  
-        {  
-          "type": "time",  
-          "style": "plain",  
-          "foreground": "#007ACC",  
-          "properties": {  
-            "time_format": "15:04:05"  
-          }  
-        }  
-      ]  
-    },  
-    {  
-      "type": "newline"  
-    },  
-    {  
-      "type": "prompt",  
-      "alignment": "left",  
-      "segments": [  
-        {  
-          "type": "session",  
-          "style": "diamond",  
-          "leading_diamond": "\uE0B6",  
-          "trailing_diamond": "\uE0B0",  
-          "foreground": "#100e23",  
-          "background": "#ffffff"  
-        },  
-        {  
-          "type": "path",  
-          "style": "powerline",  
-          "powerline_symbol": "\uE0B0",  
-          "foreground": "#100e23",  
-          "background": "#91ddff",  
-          "properties" : {  
-              "home_icon": "\uF7DB",  
-              "folder_icon": "\uF115",  
-              "folder_separator_icon": " \uE0B1 ",  
-              "style": "agnoster"  
-          }  
-        },  
-        {  
-          "type": "git",  
-          "style": "powerline",  
-          "powerline_symbol": "\uE0B0",  
-          "foreground": "#193549",  
-          "background": "#95ffa4"  
-        },  
-        {  
-          "type": "exit",  
-          "style": "powerline",  
-          "powerline_symbol": "\uE0B0",  
-          "foreground": "#ffffff",  
-          "background": "#ff8080"  
-        }  
-      ]  
-    }  
-  ],  
-  "final_space": true  
-}  
-
-
-
-
-
+也可以自写主题然后手动指定主题路径
