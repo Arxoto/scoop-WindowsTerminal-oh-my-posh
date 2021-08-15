@@ -51,14 +51,16 @@ scoop bucket add extras
 不推荐用scoop安装steam（软件自动更新问题）  
   
 推荐部分软件  
-dismplusplus（系统优化垃圾清理） driverstoreexplorer（驱动清理） freemove（mklink移动文件） spacesniffer or wiztree（查看盘符文件占用） memreduct（内存清理）  
-geekuninstaller（卸载工具） hasher（计算hash） notepadplusplus（记事本） potplayer（播放器）  
+geekuninstaller（卸载工具） freemove（mklink移动文件） spacesniffer wiztree（查看盘符文件占用）  
+dismplusplus（系统优化垃圾清理） driverstoreexplorer（驱动清理） memreduct（内存清理）  
+hasher（计算hash） notepadplusplus sublime-text vim（文本编辑器） potplayer（播放器）  
 trafficmonitor（网速温度占用） ditto（剪切板 系统自带win+v） switchhosts（host切换）  
-qbittorrent-enhanced（bt下载） motrix or neatdownloadmanager（下载器）  
-screentogif（录屏gif） sumatrapdf（pdf阅读）  
-everything or listary or wox（搜索启动）  
-JetBrainsMono-NF SarasaGothic-SC   
-ffmpeg youtube-dl youtube-dl-gui    
+windows-terminal（终端） quicklook（预览） snipaste（截图贴图）  
+qbittorrent-enhanced motrix neatdownloadmanager（下载器）  
+screentogif sharex（录屏gif） sumatrapdf（pdf阅读）  
+everything listary wox（搜索启动）  
+JetBrainsMono-NF SarasaGothic-SC  
+ffmpeg youtube-dl youtube-dl-gui  
 
 
 
