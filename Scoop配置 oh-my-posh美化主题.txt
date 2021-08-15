@@ -1,10 +1,12 @@
 [ scoop Manual ]
 
 code $PROFILE
+【推荐】
+Invoke-Expression (oh-my-posh --init --shell pwsh --config "D:/develop/Scoop_oh-my-posh_JesuseMory.omp.json")
 
+【也可】
 Invoke-Expression (oh-my-posh --init --shell pwsh --config "$(scoop prefix oh-my-posh)/themes/jandedobbeleer.omp.json")
 
-Invoke-Expression (oh-my-posh --init --shell pwsh --config "D:/develop/Scoop_oh-my-posh_JesuseMory.omp.json")
 
 
 
