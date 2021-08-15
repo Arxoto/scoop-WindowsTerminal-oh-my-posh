@@ -28,9 +28,8 @@ win10自带PowerShell 5.X
 
 
 PowerShell运行命令
->Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-
-或
+>Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')  
+>or  
 >iwr -useb get.scoop.sh | iex
 
 如报错可尝试先运行
