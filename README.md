@@ -51,9 +51,9 @@ scoop bucket add extras
 不推荐用scoop安装steam（软件自动更新问题）  
   
 推荐部分软件  
+hasher（计算hash） notepadplusplus sublime-text typora vim（文本编辑器） potplayer lav-filters madvr（播放器）  
 geekuninstaller（卸载工具） freemove（mklink移动文件） spacesniffer wiztree（查看盘符文件占用）  
 dismplusplus（系统优化垃圾清理） driverstoreexplorer（驱动清理） memreduct（内存清理）  
-hasher（计算hash） notepadplusplus sublime-text vim（文本编辑器） potplayer（播放器）  
 trafficmonitor（网速温度占用） ditto（剪切板 系统自带win+v） switchhosts（host切换）  
 windows-terminal（终端） quicklook（预览） snipaste（截图贴图）  
 qbittorrent-enhanced motrix neatdownloadmanager（下载器）  
@@ -113,4 +113,3 @@ https://ohmyposh.dev/docs/windows
 主题路径 Scoop\apps\oh-my-posh\current\themes  
 jandedobbeleer.omp.json可更换为其他主题  
 也可以自写主题然后手动指定主题路径
-
